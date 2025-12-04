@@ -147,6 +147,13 @@ a:focus-visible {
   background: transparent;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
 .cta.ghost {
   border: 1px solid var(--outline);
   color: var(--text);
