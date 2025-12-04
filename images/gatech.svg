@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
-  <rect width="140" height="140" rx="28" fill="#d7c59a"/>
-  <rect x="16" y="16" width="108" height="108" rx="20" fill="rgba(51,38,31,0.08)"/>
-  <path d="M36 82c6 12 18 20 34 20 18 0 32-12 32-30 0-18-14-30-32-30-10 0-20 4-26 12l14 8c2-4 6-6 12-6 9 0 16 6 16 16 0 10-7 16-16 16-6 0-12-2-16-8H36Z" fill="#33261f"/>
-  <text x="70" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#33261f">GT</text>
-</svg>
