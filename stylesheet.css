@@ -25,7 +25,7 @@ body {
   color: var(--text);
   font-family: 'Space Grotesk', 'Chivo', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
-  padding: 32px clamp(20px, 3vw, 40px) 72px;
+  padding: 84px clamp(20px, 3vw, 40px) 72px;
   line-height: 1.6;
 }
 
@@ -411,9 +411,50 @@ a:focus-visible {
   box-shadow: var(--shadow);
 }
 
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid var(--outline);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px clamp(16px, 3vw, 28px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #2b201a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.brand {
+  font-weight: 700;
+  color: #2b201a;
+  letter-spacing: 0.04em;
+  font-size: 14px;
+}
+
 @media (max-width: 768px) {
   body {
-    padding: 24px 18px 64px;
+    padding: 84px 18px 64px;
   }
 
   .hero__content h1 {
