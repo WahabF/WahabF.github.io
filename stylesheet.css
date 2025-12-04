@@ -130,6 +130,13 @@ a:focus-visible {
   box-shadow: var(--shadow);
 }
 
+.cta .icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
 .cta.ghost {
   border: 1px solid var(--outline);
   color: var(--text);
@@ -347,6 +354,23 @@ a:focus-visible {
 
 .timeline__content p {
   margin: 2px 0 0;
+}
+
+.edu {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.edu-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--outline);
+  padding: 8px;
 }
 
 .contact-row {
