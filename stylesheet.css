@@ -389,6 +389,21 @@ a:focus-visible {
   gap: 12px;
 }
 
+.visit-counter {
+  max-width: 1200px;
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--outline);
+  color: var(--text);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: var(--shadow);
+}
+
 @media (max-width: 768px) {
   body {
     padding: 24px 18px 64px;

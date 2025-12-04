@@ -378,5 +378,24 @@
       </div>
     </section>
   </main>
+  <div class="visit-counter">
+    <span>Visits:</span>
+    <strong id="visit-count">—</strong>
+  </div>
+  <script>
+    (function () {
+      const el = document.getElementById('visit-count');
+      if (!el) return;
+      fetch('https://api.countapi.xyz/hit/wahabf.github.io/visits')
+        .then(res => res.json())
+        .then(data => {
+          if (typeof data.value === 'number') el.textContent = data.value.toLocaleString();
+          else el.textContent = '…';
+        })
+        .catch(() => {
+          el.textContent = '—';
+        });
+    }());
+  </script>
 </body>
 </html>
