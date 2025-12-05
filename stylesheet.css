@@ -4,7 +4,7 @@
   --bg: #fff6d6; /* softened bright yellow */
   --panel: rgba(255, 255, 255, 0.82);
   --panel-strong: rgba(255, 255, 255, 0.92);
-  --text: #33261f; /* warm brown */
+  --text: #3d191c; /* warm brown */
   --muted: #5f4d42;
   --accent: #2fa9b5; /* soft teal */
   --accent-2: #5bd9e6; /* lighter teal */
@@ -18,10 +18,10 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(47, 169, 181, 0.14), transparent 30%),
-              radial-gradient(circle at 70% 12%, rgba(47, 169, 181, 0.12), transparent 30%),
-              radial-gradient(ellipse at 40% 75%, rgba(51, 38, 31, 0.09), transparent 32%),
-              var(--bg);
+  background:
+    linear-gradient(180deg, #fff6d6 0%, #fff6d6 58%, #dff8fb 82%, #b6eef5 100%),
+    radial-gradient(circle at 25% 25%, rgba(47, 169, 181, 0.12), transparent 32%),
+    radial-gradient(ellipse at 45% 78%, rgba(61, 25, 28, 0.12), transparent 34%);
   color: var(--text);
   font-family: 'Space Grotesk', 'Chivo', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
@@ -52,10 +52,10 @@ a:focus-visible {
 .background-glow {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(47, 169, 181, 0.18), transparent 28%),
-              radial-gradient(circle at 70% 60%, rgba(51, 38, 31, 0.12), transparent 26%);
-  filter: blur(52px);
-  opacity: 0.7;
+  background: radial-gradient(circle at 50% 78%, rgba(47, 169, 181, 0.28), transparent 32%),
+              radial-gradient(circle at 30% 22%, rgba(61, 25, 28, 0.12), transparent 28%);
+  filter: blur(54px);
+  opacity: 0.72;
   pointer-events: none;
 }
 
@@ -72,6 +72,7 @@ a:focus-visible {
   font-size: clamp(36px, 5vw, 56px);
   margin: 8px 0;
   letter-spacing: -1px;
+  white-space: nowrap;
 }
 
 .lead {
@@ -84,7 +85,7 @@ a:focus-visible {
 .eyebrow {
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--accent);
   margin: 0;
 }
@@ -103,6 +104,12 @@ a:focus-visible {
   background: rgba(255, 255, 255, 0.03);
   color: var(--muted);
   font-size: 13px;
+}
+
+.highlight-text {
+  display: inline-block;
+  color: #2fa9b5;
+  font-weight: 700;
 }
 
 .cta-row {
@@ -209,22 +216,6 @@ a:focus-visible {
   z-index: 2;
 }
 
-.profile-meta {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  padding: 12px;
-  border-radius: 14px;
-  background: rgba(5, 9, 19, 0.75);
-  border: 1px solid var(--outline);
-  color: var(--muted);
-  font-size: 13px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 3;
-}
-
 .page {
   max-width: 1200px;
   margin: 0 auto;
@@ -244,12 +235,12 @@ a:focus-visible {
 
 .section h2 {
   margin: 6px 0 0;
-  font-size: clamp(24px, 4vw, 32px);
+  font-size: clamp(26px, 4.4vw, 36px);
 }
 
 .body-text {
   color: var(--muted);
-  max-width: 880px;
+  max-width: none;
 }
 
 .grid {
@@ -411,6 +402,42 @@ a:focus-visible {
   box-shadow: var(--shadow);
 }
 
+.pub-flex {
+  display: grid;
+  grid-template-columns: minmax(160px, 260px) 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.pub-teaser {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 12px;
+  border: 1px solid var(--outline);
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+
+.author-self {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pub-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.pub-links .icon-img {
+  width: 22px;
+  height: 22px;
+  margin-right: 0;
+  border-radius: 6px;
+  background: transparent;
+}
+
 .top-nav {
   position: fixed;
   top: 0;
@@ -439,16 +466,27 @@ a:focus-visible {
   flex-wrap: wrap;
 }
 
-.nav-links a {
-  color: #2b201a;
-  font-weight: 600;
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand a {
+  font-weight: 700;
+  color: #3d191c;
+  letter-spacing: 0.04em;
   font-size: 14px;
 }
 
-.brand {
-  font-weight: 700;
-  color: #2b201a;
-  letter-spacing: 0.04em;
+.location {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.nav-links a {
+  color: #3d191c;
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -459,6 +497,7 @@ a:focus-visible {
 
   .hero__content h1 {
     letter-spacing: -0.5px;
+    white-space: normal;
   }
 
   .section__header {
