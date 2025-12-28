@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Chivo:wght@300;400;500&display=swap');
 
 :root {
-  --bg: #fff6d6; /* softened bright yellow */
+  --bg: #fff6d6;
+  /* softened bright yellow */
   --panel: rgba(255, 255, 255, 0.82);
   --panel-strong: rgba(255, 255, 255, 0.92);
-  --text: #3d191c; /* warm brown */
+  --text: #3d191c;
+  /* warm brown */
   --muted: #5f4d42;
-  --accent: #2fa9b5; /* soft teal */
-  --accent-2: #5bd9e6; /* lighter teal */
+  --accent: #2fa9b5;
+  /* soft teal */
+  --accent-2: #5bd9e6;
+  /* lighter teal */
   --outline: rgba(51, 38, 31, 0.12);
   --shadow: 0 16px 48px rgba(51, 38, 31, 0.18);
 }
@@ -43,7 +47,7 @@ a:focus-visible {
   position: fixed;
   inset: 0;
   background-image: linear-gradient(rgba(51, 38, 31, 0.06) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(47, 169, 181, 0.08) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(47, 169, 181, 0.08) 1px, transparent 1px);
   background-size: 180px 180px;
   opacity: 0.22;
   pointer-events: none;
@@ -53,7 +57,7 @@ a:focus-visible {
   position: fixed;
   inset: 0;
   background: radial-gradient(circle at 50% 78%, rgba(47, 169, 181, 0.28), transparent 32%),
-              radial-gradient(circle at 30% 22%, rgba(61, 25, 28, 0.12), transparent 28%);
+    radial-gradient(circle at 30% 22%, rgba(61, 25, 28, 0.12), transparent 28%);
   filter: blur(54px);
   opacity: 0.72;
   pointer-events: none;
@@ -203,7 +207,7 @@ a:focus-visible {
   inset: 16px;
   border-radius: 14px;
   background: radial-gradient(circle at 20% 20%, rgba(14, 182, 199, 0.32), transparent 45%),
-              radial-gradient(circle at 80% 60%, rgba(255, 223, 79, 0.25), transparent 40%);
+    radial-gradient(circle at 80% 60%, rgba(255, 223, 79, 0.25), transparent 40%);
   filter: blur(40px);
   opacity: 0.9;
 }
@@ -223,6 +227,7 @@ a:focus-visible {
 
 .section {
   padding: 34px 0;
+  scroll-margin-top: 100px;
 }
 
 .section__header {
@@ -260,6 +265,24 @@ a:focus-visible {
   display: grid;
   gap: 12px;
 }
+
+#news .list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+  /* minimal space for scrollbar */
+}
+
+/* Custom scrollbar for news */
+#news .list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#news .list::-webkit-scrollbar-thumb {
+  background-color: rgba(61, 25, 28, 0.2);
+  border-radius: 4px;
+}
+
 
 .list-item {
   display: grid;
