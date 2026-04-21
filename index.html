@@ -46,6 +46,12 @@
       </p>
       <div class="cta-row">
         <a class="cta ghost" href="CV_Felemban.pdf" target="_blank" rel="noreferrer">Full CV</a>
+        <button class="cta playful" id="dont-press-button" type="button" aria-expanded="false"
+          aria-controls="dont-press-note">Don't press</button>
+      </div>
+      <div class="playful-note" id="dont-press-note" hidden>
+        <p>Ok... now you have to help me get an internship.</p>
+        <p>Or read one of my papers and send me an idea for future collaboration :)</p>
       </div>
       <!-- <div class="pill-strip">
         <span>LLMs · VLMs · MLLMs</span>
@@ -556,6 +562,25 @@
       </div>
     </section>
   </main>
+  <script>
+    const dontPressButton = document.getElementById('dont-press-button');
+    const dontPressNote = document.getElementById('dont-press-note');
+
+    if (dontPressButton && dontPressNote) {
+      dontPressButton.addEventListener('click', () => {
+        const isHidden = dontPressNote.hasAttribute('hidden');
+        if (isHidden) {
+          dontPressNote.removeAttribute('hidden');
+          dontPressButton.textContent = 'Too late';
+          dontPressButton.setAttribute('aria-expanded', 'true');
+        } else {
+          dontPressNote.setAttribute('hidden', '');
+          dontPressButton.textContent = "Don't press";
+          dontPressButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

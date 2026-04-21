@@ -171,6 +171,30 @@ a:focus-visible {
   background: rgba(255, 255, 255, 0.04);
 }
 
+.cta.playful {
+  border: 1px dashed rgba(61, 25, 28, 0.28);
+  color: #6a2529;
+  background: rgba(255, 231, 153, 0.7);
+}
+
+.playful-note {
+  margin-top: 12px;
+  max-width: 560px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(61, 25, 28, 0.14);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.playful-note p {
+  margin: 0;
+}
+
+.playful-note p + p {
+  margin-top: 6px;
+}
+
 .cta:hover,
 .cta:focus-visible {
   transform: translateY(-1px);
